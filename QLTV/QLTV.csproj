@@ -55,6 +55,12 @@
     <Compile Include="QLDG.Designer.cs">
       <DependentUpon>QLDG.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMT.Designer.cs">
+      <DependentUpon>QLMT.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <EmbeddedResource Include="QLDG.resx">
       <DependentUpon>QLDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLMT.resx">
+      <DependentUpon>QLMT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLSach.resx">
       <DependentUpon>QLSach.cs</DependentUpon>

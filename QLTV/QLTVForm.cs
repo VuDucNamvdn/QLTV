@@ -97,22 +97,23 @@ namespace QLTV
         private void qldsBTN_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, mydefine.color2);
+            OpenChildForm(new QLSach());
         }
 
         private void helperBTN_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, mydefine.color3);
+            
         }
 
         private void qlmtBTN_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, mydefine.color6);
+            OpenChildForm(new QLMT());
         }
 
         private void exitBTN_Click(object sender, EventArgs e)
         {
             Close();
         }
-
     }
 }
