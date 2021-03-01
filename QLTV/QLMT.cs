@@ -12,9 +12,19 @@ namespace QLTV
 {
     public partial class QLMT : Form
     {
+        SQLManager sQLManager;
         public QLMT()
         {
             InitializeComponent();
+            try
+            {
+                sQLManager = new SQLManager(mydefine.dataSource);
+                sQLManager.getDataToDataGridView("select * from DauSach", bookDataTB);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

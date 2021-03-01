@@ -15,7 +15,10 @@ namespace QLTV
         private Button currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public QLTVForm()
+        private bool bIsDragging = false;
+        private Point startPoint = new Point(0,0);
+        private int role;
+        public QLTVForm(string iD,int _Role)
         {
             InitializeComponent();
 
@@ -28,8 +31,13 @@ namespace QLTV
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            ActivateButton(homeBTN, mydefine.color3);
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             #endregion
-            
         }
         #region Đổi màu phím
         private void ActivateButton(object senderBtn, Color color)
@@ -94,12 +102,6 @@ namespace QLTV
             OpenChildForm(new QLDG());
         }
 
-        private void qldsBTN_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, mydefine.color2);
-            OpenChildForm(new QLSach());
-        }
-
         private void helperBTN_Click(object sender, EventArgs e)
         {
             
@@ -113,7 +115,36 @@ namespace QLTV
 
         private void exitBTN_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+        }
+
+        private void QLTVForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            bIsDragging = true;
+            startPoint = new Point(e.X,e.Y);
+        }
+
+        private void QLTVForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            bIsDragging = false;
+        }
+
+        private void QLTVForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (bIsDragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X-startPoint.X, p.Y-startPoint.Y);
+            }    
+        }
+
+        private void homeBTN_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, mydefine.color3);
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
         }
     }
 }

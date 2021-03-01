@@ -12,9 +12,19 @@ namespace QLTV
 {
     public partial class QLDG : Form
     {
+        SQLManager sQLManager;
         public QLDG()
         {
             InitializeComponent();
+            try
+            {
+                sQLManager = new SQLManager(mydefine.dataSource);
+                sQLManager.getDataToDataGridView("select * from DocGia", docGiaDataTB);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

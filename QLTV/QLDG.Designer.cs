@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.IDtxtBox = new System.Windows.Forms.TextBox();
-            this.NametxtBox = new System.Windows.Forms.TextBox();
+            this.expiryDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.expiryDate = new System.Windows.Forms.DateTimePicker();
+            this.NametxtBox = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.addBTN = new System.Windows.Forms.Button();
             this.delBTN = new System.Windows.Forms.Button();
             this.updateBTN = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.docGiaDataTB = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.docGiaDataTB)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,23 +74,19 @@
             this.panel3.Size = new System.Drawing.Size(1172, 406);
             this.panel3.TabIndex = 1;
             // 
-            // panel2
+            // panel5
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(5, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1172, 257);
-            this.panel2.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1172, 252);
-            this.dataGridView1.TabIndex = 0;
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.IDtxtBox);
+            this.panel5.Controls.Add(this.expiryDate);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.NametxtBox);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(369, 406);
+            this.panel5.TabIndex = 10;
             // 
             // label1
             // 
@@ -108,12 +105,12 @@
             this.IDtxtBox.Size = new System.Drawing.Size(133, 19);
             this.IDtxtBox.TabIndex = 1;
             // 
-            // NametxtBox
+            // expiryDate
             // 
-            this.NametxtBox.Location = new System.Drawing.Point(103, 52);
-            this.NametxtBox.Name = "NametxtBox";
-            this.NametxtBox.Size = new System.Drawing.Size(133, 19);
-            this.NametxtBox.TabIndex = 3;
+            this.expiryDate.Location = new System.Drawing.Point(104, 74);
+            this.expiryDate.Name = "expiryDate";
+            this.expiryDate.Size = new System.Drawing.Size(200, 19);
+            this.expiryDate.TabIndex = 5;
             // 
             // label2
             // 
@@ -135,12 +132,23 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày hết hạn: ";
             // 
-            // expiryDate
+            // NametxtBox
             // 
-            this.expiryDate.Location = new System.Drawing.Point(104, 74);
-            this.expiryDate.Name = "expiryDate";
-            this.expiryDate.Size = new System.Drawing.Size(200, 19);
-            this.expiryDate.TabIndex = 5;
+            this.NametxtBox.Location = new System.Drawing.Point(103, 52);
+            this.NametxtBox.Name = "NametxtBox";
+            this.NametxtBox.Size = new System.Drawing.Size(133, 19);
+            this.NametxtBox.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.addBTN);
+            this.panel4.Controls.Add(this.delBTN);
+            this.panel4.Controls.Add(this.updateBTN);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(865, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(307, 406);
+            this.panel4.TabIndex = 9;
             // 
             // addBTN
             // 
@@ -175,30 +183,31 @@
             this.updateBTN.Text = "Sửa";
             this.updateBTN.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // panel2
             // 
-            this.panel4.Controls.Add(this.addBTN);
-            this.panel4.Controls.Add(this.delBTN);
-            this.panel4.Controls.Add(this.updateBTN);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(865, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(307, 406);
-            this.panel4.TabIndex = 9;
+            this.panel2.Controls.Add(this.docGiaDataTB);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(5, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1172, 257);
+            this.panel2.TabIndex = 0;
             // 
-            // panel5
+            // docGiaDataTB
             // 
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.IDtxtBox);
-            this.panel5.Controls.Add(this.expiryDate);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.NametxtBox);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(369, 406);
-            this.panel5.TabIndex = 10;
+            this.docGiaDataTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.docGiaDataTB.DefaultCellStyle = dataGridViewCellStyle1;
+            this.docGiaDataTB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.docGiaDataTB.Location = new System.Drawing.Point(0, 0);
+            this.docGiaDataTB.Name = "docGiaDataTB";
+            this.docGiaDataTB.Size = new System.Drawing.Size(1172, 252);
+            this.docGiaDataTB.TabIndex = 0;
             // 
             // QLDG
             // 
@@ -212,11 +221,11 @@
             this.Text = "Quản lý độc giả";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.docGiaDataTB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,7 +234,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView docGiaDataTB;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

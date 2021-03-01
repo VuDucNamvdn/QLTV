@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login\EncryptionHelper.cs" />
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
     <Compile Include="mydefine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,18 +74,19 @@
     <Compile Include="QLMT.Designer.cs">
       <DependentUpon>QLMT.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLSach.Designer.cs">
-      <DependentUpon>QLSach.cs</DependentUpon>
-    </Compile>
     <Compile Include="QLTVForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLTVForm.Designer.cs">
       <DependentUpon>QLTVForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLManager.cs" />
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,9 +101,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLMT.resx">
       <DependentUpon>QLMT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLSach.resx">
-      <DependentUpon>QLSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLTVForm.resx">
       <DependentUpon>QLTVForm.cs</DependentUpon>
