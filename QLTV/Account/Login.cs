@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLTV.Login
+namespace QLTV.Account
 {
-    public partial class Signup : Form
+    public partial class Login : DraggableForm
     {
         SQLManager sQLManager;
-        public Signup()
+        public Login()
         {
             InitializeComponent();
             try
@@ -26,11 +26,17 @@ namespace QLTV.Login
             }
         }
 
-        private void signupBTN_Click(object sender, EventArgs e)
+        private void loginBTN_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(iDInput.Text))
+            string query = "select * from DangNhap where MaNguoiDung = N'"+iDInput.Text+"'";
+            var data=sQLManager.getDataFromQuery(query);            
+            string password = EncryptionHelper.Decrypt(data.Tables[0].Rows[0]["MatKhau"].ToString());
+            int userRole = (int)data.Tables[0].Rows[0]["Quyen"];
+            string userID = data.Tables[0].Rows[0]["MaNguoiDung"].ToString();
+            if (pwInput.Text==password)
             {
-                MessageBox.Show("Ê");
+                new QLTVForm(userID, userRole).Show();
+                Close();              
             }
         }
 

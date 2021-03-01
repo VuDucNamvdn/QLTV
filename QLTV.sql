@@ -3,7 +3,7 @@ Go
 
 CREATE TABLE dbo.DangNhap
 (
-	MaNguoiDung INT IDENTITY(1,1) NOT NULL,
+	MaNguoiDung NVARCHAR(100) NOT NULL,
 	MatKhau NVARCHAR(100) NOT NULL,
 	Quyen INT NOT NULL,
 	PRIMARY KEY (MaNguoiDung),

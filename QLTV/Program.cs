@@ -16,8 +16,9 @@ namespace QLTV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new QLTVForm("Admin",1));
-            Application.Run(new Login.Signup());
+            Form form = new Account.Login();
+            form.Show();
+            Application.Run();
         }
     }
 }

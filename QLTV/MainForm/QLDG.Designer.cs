@@ -1,4 +1,4 @@
-﻿namespace QLTV
+﻿namespace QLTV.MainForm
 {
     partial class QLDG
     {
@@ -69,9 +69,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(5, 262);
+            this.panel3.Location = new System.Drawing.Point(5, 412);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1172, 406);
+            this.panel3.Size = new System.Drawing.Size(1172, 256);
             this.panel3.TabIndex = 1;
             // 
             // panel5
@@ -85,7 +85,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(369, 406);
+            this.panel5.Size = new System.Drawing.Size(369, 256);
             this.panel5.TabIndex = 10;
             // 
             // label1
@@ -147,7 +147,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(865, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(307, 406);
+            this.panel4.Size = new System.Drawing.Size(307, 256);
             this.panel4.TabIndex = 9;
             // 
             // addBTN
@@ -189,11 +189,12 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(5, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1172, 257);
+            this.panel2.Size = new System.Drawing.Size(1172, 407);
             this.panel2.TabIndex = 0;
             // 
             // docGiaDataTB
             // 
+            this.docGiaDataTB.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.docGiaDataTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -203,11 +204,12 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.docGiaDataTB.DefaultCellStyle = dataGridViewCellStyle1;
-            this.docGiaDataTB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.docGiaDataTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.docGiaDataTB.Location = new System.Drawing.Point(0, 0);
             this.docGiaDataTB.Name = "docGiaDataTB";
-            this.docGiaDataTB.Size = new System.Drawing.Size(1172, 252);
+            this.docGiaDataTB.Size = new System.Drawing.Size(1172, 407);
             this.docGiaDataTB.TabIndex = 0;
+            this.docGiaDataTB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.docGiaDataTB_CellMouseClick);
             // 
             // QLDG
             // 

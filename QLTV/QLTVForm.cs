@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLTV.MainForm;
 
 namespace QLTV
 {
-    public partial class QLTVForm : Form
+    public partial class QLTVForm : DraggableForm
     {
         private Button currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        private bool bIsDragging = false;
-        private Point startPoint = new Point(0,0);
         private int role;
         public QLTVForm(string iD,int _Role)
         {
@@ -32,6 +31,18 @@ namespace QLTV
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
+            //Khung tài khoản
+            userNamelabel.Text = iD;
+            role = _Role;
+            mydefine.SizeLabelFont(userNamelabel);
+            if(role != 0)
+            {
+                addUser.Hide();
+            }
+            if (role == 0)
+            {
+                settingBTN.Hide();
+            }
             ActivateButton(homeBTN, mydefine.color3);
             if (currentChildForm != null)
             {
@@ -112,30 +123,14 @@ namespace QLTV
             ActivateButton(sender, mydefine.color6);
             OpenChildForm(new QLMT());
         }
-
+        private void qlsBTN_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, mydefine.color5);
+            OpenChildForm(new QLSach());
+        }
         private void exitBTN_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void QLTVForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            bIsDragging = true;
-            startPoint = new Point(e.X,e.Y);
-        }
-
-        private void QLTVForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            bIsDragging = false;
-        }
-
-        private void QLTVForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (bIsDragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X-startPoint.X, p.Y-startPoint.Y);
-            }    
         }
 
         private void homeBTN_Click(object sender, EventArgs e)
@@ -145,6 +140,21 @@ namespace QLTV
             {
                 currentChildForm.Close();
             }
+        }
+
+        private void minimizeBTN_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void addUser_Click(object sender, EventArgs e)
+        {
+            new Account.Signup().ShowDialog();
+        }
+
+        private void settingBTN_Click(object sender, EventArgs e)
+        {
+            new Account.AccountSettingsForm(userNamelabel.Text).ShowDialog();
         }
     }
 }

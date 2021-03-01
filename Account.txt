@@ -1,0 +1,4 @@
+tài khoản admin: admin/ admin
+tài khoản thường: tommy/ 123
+
+Tạo thêm acc bằng cách ấn dấu cộng ở trên title bar của pm khi đăng nhập = admin
