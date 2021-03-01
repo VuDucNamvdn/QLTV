@@ -62,4 +62,4 @@ FROM
 INNER JOIN DauSach ON D_MuonTra.MaSach = DauSach.MaSach  
 where D_MuonTra.MaMuonTra = @MaMuonTra
 GO
-exec LayDMT
+exec LayDMT '1'
