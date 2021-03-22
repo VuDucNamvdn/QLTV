@@ -19,6 +19,7 @@ namespace QLTV.MainForm
             try
             {
                 sQLManager = new SQLManager(mydefine.dataSource);
+                IDtxtBox.ReadOnly = true;
                 UpdateBookTB();
                 UpdateCat();
             }
@@ -49,18 +50,25 @@ namespace QLTV.MainForm
         }
         private void bookDataTB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IDtxtBox.Text = bookDataTB.Rows[e.RowIndex].Cells[0].Value.ToString();
-            NametxtBox.Text = bookDataTB.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string catName = bookDataTB.Rows[e.RowIndex].Cells[2].Value.ToString();
-            for (int i = 0; i < CategoryBox.Items.Count; i++)
+            try
             {
-                if (CategoryBox.Items[i].ToString() == catName)
+                IDtxtBox.Text = bookDataTB.Rows[e.RowIndex].Cells[0].Value.ToString();
+                NametxtBox.Text = bookDataTB.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string catName = bookDataTB.Rows[e.RowIndex].Cells[2].Value.ToString();
+                for (int i = 0; i < CategoryBox.Items.Count; i++)
                 {
-                    CategoryBox.SelectedIndex = i;
-                    break;
+                    if (CategoryBox.Items[i].ToString() == catName)
+                    {
+                        CategoryBox.SelectedIndex = i;
+                        break;
+                    }
                 }
+                nOfBook.Value = (int)bookDataTB.Rows[e.RowIndex].Cells[3].Value;
             }
-            nOfBook.Value = (int)bookDataTB.Rows[e.RowIndex].Cells[3].Value;
+            catch
+            {
+                return;
+            }
         }
     }
 }

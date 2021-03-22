@@ -50,9 +50,6 @@ VALUES      (@MaMuonTra,@MaSach,@SL,@NgayTra,'0');
 GO
 
 
-
-
-
 CREATE PROCEDURE LayDMT @MaMuonTra int
 AS 
 SELECT D_MuonTra.MaSach,DauSach.TenSach,D_MuonTra.SoLuongSach,

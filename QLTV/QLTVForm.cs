@@ -135,6 +135,7 @@ namespace QLTV
 
         private void homeBTN_Click(object sender, EventArgs e)
         {
+            Reset();
             ActivateButton(sender, mydefine.color3);
             if (currentChildForm != null)
             {

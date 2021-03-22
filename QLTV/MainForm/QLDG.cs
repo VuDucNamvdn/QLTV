@@ -16,6 +16,7 @@ namespace QLTV.MainForm
         public QLDG()
         {
             InitializeComponent();
+            IDtxtBox.ReadOnly = true;
             try
             {
                 sQLManager = new SQLManager(mydefine.dataSource);
@@ -42,7 +43,11 @@ namespace QLTV.MainForm
 
         private void docGiaDataTB_CellMouseClick(object sender, DataGridViewCellEventArgs e)
         {
-            getRowData(e);
+            try
+            {
+                getRowData(e);
+            }
+            catch { }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace QLTV.MainForm
         public QLMT()
         {
             InitializeComponent();
+            IDMTtxtBox.ReadOnly = true;
             try
             {
                 sQLManager = new SQLManager(mydefine.dataSource);
@@ -46,8 +47,12 @@ namespace QLTV.MainForm
             try
             {
                 IDMTtxtBox.Text = rentingDataTB.Rows[e.RowIndex].Cells[0].Value.ToString();
-                NametxtBox.Text = rentingDataTB.Rows[e.RowIndex].Cells[1].Value.ToString();
+                iDDGtxtBox.Text = rentingDataTB.Rows[e.RowIndex].Cells[1].Value.ToString();
                 expiryDate.Value = Convert.ToDateTime(rentingDataTB.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+
+                var data = sQLManager.getDataFromQuery("SELECT TenDocGia from DocGia where MaDocGia = N'"+ iDDGtxtBox.Text + "'");
+                NameDGtxtBox.Text = data.Tables[0].Rows[0]["TenDocGia"].ToString();
                 UpdateRentDetailTB();
             }
             catch

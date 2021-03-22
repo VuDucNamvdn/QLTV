@@ -114,13 +114,25 @@ namespace QLTV
 
         private void bookToAddTB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                bookID.Text = bookToAddTB.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+            catch
+            {
 
-            bookID.Text = bookToAddTB.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
         private void bookAddedToRentTB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                bookID.Text = bookAddedToRentTB.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+            catch
+            {
 
-            bookID.Text = bookAddedToRentTB.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
     }
 }

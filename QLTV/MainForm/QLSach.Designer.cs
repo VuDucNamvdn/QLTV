@@ -249,7 +249,7 @@ namespace QLTV.MainForm
             this.Controls.Add(this.panel5);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "QLSach";
-            this.Text = "QLSach";
+            this.Text = "Quản lý sách";
             this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
