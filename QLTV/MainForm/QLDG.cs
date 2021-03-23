@@ -49,5 +49,25 @@ namespace QLTV.MainForm
             }
             catch { }
         }
+
+        private void delBTN_Click(object sender, EventArgs e)
+        {
+            sQLManager.command = sQLManager.connection.CreateCommand();
+
+            //Xóa khóa ngoại trong bảng MuonTra
+            sQLManager.command.CommandText = "delete from MuonTra where MaDocGia = '" + IDtxtBox.Text + "'";
+            sQLManager.connection.Open();
+            sQLManager.command.ExecuteNonQuery();
+            sQLManager.connection.Close();
+
+            //Xóa độc giả trong bảng Docgia
+            sQLManager.command.CommandText = "delete from Docgia where MaDocGia ='" + IDtxtBox.Text + "'";
+            sQLManager.connection.Open();
+            sQLManager.command.ExecuteNonQuery();
+            sQLManager.connection.Close();
+
+            //In lại ra datagridview
+            UpdateDGTB();
+        }
     }
 }

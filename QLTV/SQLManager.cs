@@ -12,8 +12,8 @@ namespace QLTV
     class SQLManager
     {
         //Ket noi SQL
-        SqlConnection connection;
-        SqlCommand command;
+        public SqlConnection connection;
+        public SqlCommand command;
         SqlDataReader sqlReader;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable dataTable;
