@@ -36,10 +36,17 @@ namespace QLTV
         //Chạy các query k cần output
         public void runqueryWithoutOutput(string query)
         {
-            command = new SqlCommand(query, connection);
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
+            try
+            {
+                command = new SqlCommand(query, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //Chạy query với đầu ra bảng dữ liệu
         public DataSet getDataFromQuery(string query)
@@ -48,6 +55,23 @@ namespace QLTV
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
             return ds;
+        }
+        //Chạy query ra list string
+        public List<string> stringDataFromQuery(string query)
+        {
+            command = new SqlCommand(query, connection);
+            connection.Open();
+            sqlReader = command.ExecuteReader();
+
+            List<string> data = new List<string>();
+            while (sqlReader.Read())
+            {
+                data.Add(sqlReader[0].ToString());
+                //strValue=myreader["email"].ToString();
+                //strValue=myreader.GetString(0);
+            }
+            connection.Close();
+            return data;
         }
     }
 }

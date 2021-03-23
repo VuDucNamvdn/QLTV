@@ -42,13 +42,15 @@ CREATE PROCEDURE ThemMT @MaDocGia int, @NgayHetHan datetime
 AS
 INSERT INTO dbo.MuonTra(MaDocGia,NgayHetHan)
 VALUES      (@MaDocGia,@NgayHetHan);  
+SELECT SCOPE_IDENTITY();
 GO
+
 CREATE PROCEDURE ThemDMT @MaMuonTra int,@MaSach int,@SL int, @NgayTra datetime
 AS 
 INSERT INTO dbo.D_MuonTra(MaMuonTra,MaSach,SoLuongSach,NgayTra,TinhTrang)
 VALUES      (@MaMuonTra,@MaSach,@SL,@NgayTra,'0');
 GO
-
+exec ThemDMT @MaMuonTra = '1007',@MaSach ='3',@SL ='3',@NgayTra=null
 
 CREATE PROCEDURE LayDMT @MaMuonTra int
 AS 

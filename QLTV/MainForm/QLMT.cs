@@ -71,5 +71,15 @@ namespace QLTV.MainForm
             rentDetailTB.Columns[4].HeaderText = "Ngày trả";
             mydefine.ResizeDataTB(rentDetailTB);
         }
+
+        private void addBTN_Click(object sender, EventArgs e)
+        {
+            string idMT = sQLManager.stringDataFromQuery("exec ThemMT @MaDocGia ='" + iDDGtxtBox.Text + "', @NgayHetHan = '" + expiryDate.Value.Date.ToString("yyyy-MM-dd") + "'")[0];
+            MessageBox.Show(idMT);
+            foreach(DataGridViewRow row in bookToRentTB.Rows)
+            {
+                sQLManager.runqueryWithoutOutput("exec ThemDMT @MaMuonTra = '"+idMT+"',@MaSach ='"+row.Cells[0].Value.ToString() +"',@SL ='"+ row.Cells[3].Value.ToString() + "',@NgayTra=null");
+            }
+        }
     }
 }

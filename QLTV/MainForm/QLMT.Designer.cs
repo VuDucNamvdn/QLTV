@@ -379,6 +379,7 @@ namespace QLTV.MainForm
             this.addBTN.TabIndex = 9;
             this.addBTN.Text = "Thêm";
             this.addBTN.UseVisualStyleBackColor = true;
+            this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
             // 
             // delBTN
             // 
