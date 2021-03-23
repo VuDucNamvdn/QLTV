@@ -171,6 +171,7 @@
             this.delBTN.TabIndex = 7;
             this.delBTN.Text = "Xóa";
             this.delBTN.UseVisualStyleBackColor = true;
+            this.delBTN.Click += new System.EventHandler(this.delBTN_Click);
             // 
             // updateBTN
             // 

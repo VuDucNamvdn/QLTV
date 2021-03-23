@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QLTV.MainForm
 {
     public partial class QLSach : Form
     {
         SQLManager sQLManager;
+
+        //SqlCommand command;
+        //SqlConnection connection;
+
         public QLSach()
         {
             InitializeComponent();
@@ -69,6 +74,27 @@ namespace QLTV.MainForm
             {
                 return;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sQLManager.command = sQLManager.connection.CreateCommand();
+
+            //Xóa khóa ngoại trong bảng D_MuonTra
+            sQLManager.command.CommandText = "delete from D_MuonTra where MaSach = '" + IDtxtBox.Text + "'";
+            sQLManager.connection.Open();
+            sQLManager.command.ExecuteNonQuery();
+            sQLManager.connection.Close();
+
+            //Xóa sách trong bảng DauSach
+            sQLManager.command.CommandText = "delete from DauSach where MaSach ='" + IDtxtBox.Text + "'";
+            sQLManager.connection.Open();
+            sQLManager.command.ExecuteNonQuery();
+            sQLManager.connection.Close();
+
+            //In lại ra datagridview
+            UpdateBookTB();
+            UpdateCat();
         }
     }
 }
