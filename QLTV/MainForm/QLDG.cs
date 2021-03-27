@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTV;
+using System.Data.SqlClient;
+
 namespace QLTV.MainForm
 {
     public partial class QLDG : Form
@@ -55,18 +57,47 @@ namespace QLTV.MainForm
             sQLManager.command = sQLManager.connection.CreateCommand();
 
             //Xóa khóa ngoại trong bảng MuonTra
-            sQLManager.command.CommandText = "delete from MuonTra where MaDocGia = '" + IDtxtBox.Text + "'";
-            sQLManager.connection.Open();
-            sQLManager.command.ExecuteNonQuery();
-            sQLManager.connection.Close();
+            sQLManager.runqueryWithoutOutput( "delete from MuonTra where MaDocGia = '" + IDtxtBox.Text + "'");
+
 
             //Xóa độc giả trong bảng Docgia
-            sQLManager.command.CommandText = "delete from Docgia where MaDocGia ='" + IDtxtBox.Text + "'";
-            sQLManager.connection.Open();
-            sQLManager.command.ExecuteNonQuery();
-            sQLManager.connection.Close();
+            sQLManager.runqueryWithoutOutput( "delete from Docgia where MaDocGia ='" + IDtxtBox.Text + "'");
+            
 
             //In lại ra datagridview
+            UpdateDGTB();
+        }
+
+        private void addBTN_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(mydefine.dataSource);
+            //string id = IDtxtBox.Text;
+            connection.Open();
+
+
+            string sql = "select * from Docgia where MaDocGia = '" + IDtxtBox.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+
+            SqlDataReader dta = cmd.ExecuteReader();
+            if (dta.Read() == true)
+            {
+
+                MessageBox.Show(" Trùng mã! Mời Nhập lại");
+            }
+            else
+            {
+                dta.Close();
+
+                sQLManager.runqueryWithoutOutput("Insert into Docgia values( N'" + NametxtBox.Text + "','" + expiryDate.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' )");
+                UpdateDGTB();
+            }
+        }
+
+        private void updateBTN_Click(object sender, EventArgs e)
+        {
+          
+            sQLManager.runqueryWithoutOutput("Update Docgia set TenDocGia = N'" + NametxtBox.Text + "', NgayHetHan = '" + expiryDate.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' where MaDocGia = '"+ IDtxtBox.Text + "'");
             UpdateDGTB();
         }
     }

@@ -46,6 +46,7 @@ namespace QLTV
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                connection.Close();
             }
         }
         //Chạy query với đầu ra bảng dữ liệu
@@ -59,16 +60,23 @@ namespace QLTV
         //Chạy query ra list string
         public List<string> stringDataFromQuery(string query)
         {
-            command = new SqlCommand(query, connection);
-            connection.Open();
-            sqlReader = command.ExecuteReader();
-
             List<string> data = new List<string>();
-            while (sqlReader.Read())
+            try
             {
-                data.Add(sqlReader[0].ToString());
-                //strValue=myreader["email"].ToString();
-                //strValue=myreader.GetString(0);
+                command = new SqlCommand(query, connection);
+                connection.Open();
+                sqlReader = command.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    data.Add(sqlReader[0].ToString());
+                    //strValue=myreader["email"].ToString();
+                    //strValue=myreader.GetString(0);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             connection.Close();
             return data;

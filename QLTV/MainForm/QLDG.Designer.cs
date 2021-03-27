@@ -94,7 +94,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã độc giả: ";
             // 
@@ -102,14 +102,14 @@
             // 
             this.IDtxtBox.Location = new System.Drawing.Point(103, 24);
             this.IDtxtBox.Name = "IDtxtBox";
-            this.IDtxtBox.Size = new System.Drawing.Size(133, 19);
+            this.IDtxtBox.Size = new System.Drawing.Size(133, 22);
             this.IDtxtBox.TabIndex = 1;
             // 
             // expiryDate
             // 
             this.expiryDate.Location = new System.Drawing.Point(104, 74);
             this.expiryDate.Name = "expiryDate";
-            this.expiryDate.Size = new System.Drawing.Size(200, 19);
+            this.expiryDate.Size = new System.Drawing.Size(200, 22);
             this.expiryDate.TabIndex = 5;
             // 
             // label2
@@ -118,7 +118,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.Size = new System.Drawing.Size(97, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên độc giả: ";
             // 
@@ -128,7 +128,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(105, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày hết hạn: ";
             // 
@@ -136,7 +136,7 @@
             // 
             this.NametxtBox.Location = new System.Drawing.Point(103, 52);
             this.NametxtBox.Name = "NametxtBox";
-            this.NametxtBox.Size = new System.Drawing.Size(133, 19);
+            this.NametxtBox.Size = new System.Drawing.Size(133, 22);
             this.NametxtBox.TabIndex = 3;
             // 
             // panel4
@@ -160,6 +160,7 @@
             this.addBTN.TabIndex = 6;
             this.addBTN.Text = "Thêm";
             this.addBTN.UseVisualStyleBackColor = true;
+            this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
             // 
             // delBTN
             // 
@@ -183,6 +184,7 @@
             this.updateBTN.TabIndex = 8;
             this.updateBTN.Text = "Sửa";
             this.updateBTN.UseVisualStyleBackColor = true;
+            this.updateBTN.Click += new System.EventHandler(this.updateBTN_Click);
             // 
             // panel2
             // 
@@ -208,13 +210,14 @@
             this.docGiaDataTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.docGiaDataTB.Location = new System.Drawing.Point(0, 0);
             this.docGiaDataTB.Name = "docGiaDataTB";
+            this.docGiaDataTB.RowHeadersWidth = 51;
             this.docGiaDataTB.Size = new System.Drawing.Size(1172, 407);
             this.docGiaDataTB.TabIndex = 0;
             this.docGiaDataTB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.docGiaDataTB_CellMouseClick);
             // 
             // QLDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1182, 673);

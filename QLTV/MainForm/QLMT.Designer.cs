@@ -175,10 +175,11 @@ namespace QLTV.MainForm
             // 
             this.rentDetailTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rentDetailTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rentDetailTB.Location = new System.Drawing.Point(0, 19);
+            this.rentDetailTB.Location = new System.Drawing.Point(0, 22);
             this.rentDetailTB.Name = "rentDetailTB";
             this.rentDetailTB.ReadOnly = true;
-            this.rentDetailTB.Size = new System.Drawing.Size(858, 148);
+            this.rentDetailTB.RowHeadersWidth = 51;
+            this.rentDetailTB.Size = new System.Drawing.Size(858, 145);
             this.rentDetailTB.TabIndex = 17;
             // 
             // label6
@@ -189,7 +190,7 @@ namespace QLTV.MainForm
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 19);
+            this.label6.Size = new System.Drawing.Size(144, 22);
             this.label6.TabIndex = 16;
             this.label6.Text = "Chi tiết mượn trả";
             // 
@@ -221,10 +222,11 @@ namespace QLTV.MainForm
             // 
             this.bookToRentTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookToRentTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookToRentTB.Location = new System.Drawing.Point(1, 20);
+            this.bookToRentTB.Location = new System.Drawing.Point(1, 23);
             this.bookToRentTB.Name = "bookToRentTB";
             this.bookToRentTB.ReadOnly = true;
-            this.bookToRentTB.Size = new System.Drawing.Size(515, 251);
+            this.bookToRentTB.RowHeadersWidth = 51;
+            this.bookToRentTB.Size = new System.Drawing.Size(515, 248);
             this.bookToRentTB.TabIndex = 15;
             // 
             // label5
@@ -235,7 +237,7 @@ namespace QLTV.MainForm
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(1, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 19);
+            this.label5.Size = new System.Drawing.Size(247, 22);
             this.label5.TabIndex = 2;
             this.label5.Text = "Danh sách đầu sách cho mượn";
             // 
@@ -277,9 +279,10 @@ namespace QLTV.MainForm
             // 
             this.rentingDataTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rentingDataTB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rentingDataTB.Location = new System.Drawing.Point(1, 20);
+            this.rentingDataTB.Location = new System.Drawing.Point(1, 23);
             this.rentingDataTB.Name = "rentingDataTB";
             this.rentingDataTB.ReadOnly = true;
+            this.rentingDataTB.RowHeadersWidth = 51;
             this.rentingDataTB.Size = new System.Drawing.Size(339, 283);
             this.rentingDataTB.TabIndex = 23;
             this.rentingDataTB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rentingDataTB_CellClick);
@@ -292,7 +295,7 @@ namespace QLTV.MainForm
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(1, 1);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 19);
+            this.label10.Size = new System.Drawing.Size(167, 22);
             this.label10.TabIndex = 0;
             this.label10.Text = "Danh sách mượn trả";
             // 
@@ -320,9 +323,9 @@ namespace QLTV.MainForm
             // 
             // NameDGtxtBox
             // 
-            this.NameDGtxtBox.Location = new System.Drawing.Point(93, 69);
+            this.NameDGtxtBox.Location = new System.Drawing.Point(114, 75);
             this.NameDGtxtBox.Name = "NameDGtxtBox";
-            this.NameDGtxtBox.Size = new System.Drawing.Size(133, 19);
+            this.NameDGtxtBox.Size = new System.Drawing.Size(133, 22);
             this.NameDGtxtBox.TabIndex = 22;
             // 
             // label7
@@ -331,7 +334,7 @@ namespace QLTV.MainForm
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(7, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 16);
+            this.label7.Size = new System.Drawing.Size(97, 19);
             this.label7.TabIndex = 21;
             this.label7.Text = "Tên độc giả: ";
             // 
@@ -396,7 +399,7 @@ namespace QLTV.MainForm
             // 
             this.bookSearchBox.Location = new System.Drawing.Point(10, 161);
             this.bookSearchBox.Name = "bookSearchBox";
-            this.bookSearchBox.Size = new System.Drawing.Size(133, 19);
+            this.bookSearchBox.Size = new System.Drawing.Size(133, 22);
             this.bookSearchBox.TabIndex = 3;
             // 
             // label4
@@ -405,7 +408,7 @@ namespace QLTV.MainForm
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 16);
+            this.label4.Size = new System.Drawing.Size(212, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tìm kiếm thông tin mượn trả: ";
             // 
@@ -415,15 +418,15 @@ namespace QLTV.MainForm
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã mượn trả:";
             // 
             // iDDGtxtBox
             // 
-            this.iDDGtxtBox.Location = new System.Drawing.Point(93, 44);
+            this.iDDGtxtBox.Location = new System.Drawing.Point(114, 44);
             this.iDDGtxtBox.Name = "iDDGtxtBox";
-            this.iDDGtxtBox.Size = new System.Drawing.Size(133, 19);
+            this.iDDGtxtBox.Size = new System.Drawing.Size(133, 22);
             this.iDDGtxtBox.TabIndex = 3;
             // 
             // label3
@@ -432,15 +435,15 @@ namespace QLTV.MainForm
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Hạn trả: ";
             // 
             // IDMTtxtBox
             // 
-            this.IDMTtxtBox.Location = new System.Drawing.Point(93, 18);
+            this.IDMTtxtBox.Location = new System.Drawing.Point(114, 16);
             this.IDMTtxtBox.Name = "IDMTtxtBox";
-            this.IDMTtxtBox.Size = new System.Drawing.Size(133, 19);
+            this.IDMTtxtBox.Size = new System.Drawing.Size(133, 22);
             this.IDMTtxtBox.TabIndex = 1;
             // 
             // label2
@@ -449,7 +452,7 @@ namespace QLTV.MainForm
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.Size = new System.Drawing.Size(94, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã độc giả: ";
             // 
@@ -457,12 +460,12 @@ namespace QLTV.MainForm
             // 
             this.expiryDate.Location = new System.Drawing.Point(93, 103);
             this.expiryDate.Name = "expiryDate";
-            this.expiryDate.Size = new System.Drawing.Size(200, 19);
+            this.expiryDate.Size = new System.Drawing.Size(200, 22);
             this.expiryDate.TabIndex = 5;
             // 
             // QLMT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1182, 485);

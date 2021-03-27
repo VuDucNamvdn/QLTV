@@ -11,7 +11,7 @@ namespace QLTV
     class mydefine
     {
         //Datasourse (khac nhau)
-        public const string dataSource = @"Data Source=DESKTOP-152SFQ3;Initial Catalog=QLTV;Integrated Security=True";
+        public const string dataSource = @"Data Source=DESKTOP-9JCB5HS;Initial Catalog=QLTV;Integrated Security=True";
         public static int Clamp(ref int value, int min, int max)
         {
             if (value < min)

@@ -74,12 +74,17 @@ namespace QLTV.MainForm
 
         private void addBTN_Click(object sender, EventArgs e)
         {
-            string idMT = sQLManager.stringDataFromQuery("exec ThemMT @MaDocGia ='" + iDDGtxtBox.Text + "', @NgayHetHan = '" + expiryDate.Value.Date.ToString("yyyy-MM-dd") + "'")[0];
-            MessageBox.Show(idMT);
+            string idMT = sQLManager.stringDataFromQuery("exec ThemMT @MaDocGia ='" + iDDGtxtBox.Text + "', @NgayHetHan = '" + expiryDate.Value.Date.ToString("yyyy-MM-dd HH:mm:ss") + "'")[0];
             foreach(DataGridViewRow row in bookToRentTB.Rows)
             {
+                if(row.Cells[0].Value == null)
+                {
+                    continue;
+                }    
                 sQLManager.runqueryWithoutOutput("exec ThemDMT @MaMuonTra = '"+idMT+"',@MaSach ='"+row.Cells[0].Value.ToString() +"',@SL ='"+ row.Cells[3].Value.ToString() + "',@NgayTra=null");
             }
+            UpdateRentingTB();
+            UpdateRentDetailTB();
         }
     }
 }

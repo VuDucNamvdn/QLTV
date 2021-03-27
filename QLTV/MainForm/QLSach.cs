@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QLTV;
 
 namespace QLTV.MainForm
 {
@@ -95,6 +96,38 @@ namespace QLTV.MainForm
             //In lại ra datagridview
             UpdateBookTB();
             UpdateCat();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Pass
+            if(nOfBook.Value<0)
+            {
+                MessageBox.Show("Nhập lại số lượng");
+                return;
+            }    
+            SqlConnection connection = new SqlConnection(mydefine.dataSource);
+            connection.Open();
+
+
+            string sql = "select * from DauSach where MaSach = '" + IDtxtBox.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+
+            SqlDataReader dta = cmd.ExecuteReader();
+            if (dta.Read() == true)
+            {
+
+                MessageBox.Show(" Trùng mã! Mời Nhập lại");
+            }
+            else
+            {
+                dta.Close();
+                string cateId = sQLManager.stringDataFromQuery("select MaTheLoai from TheLoai where TenTheLoai = N'" + CategoryBox.Text + "'")[0];
+                sQLManager.runqueryWithoutOutput("Insert into DauSach values( N'" + NametxtBox.Text + "', '"+ cateId + "', '"+ nOfBook.Value.ToString() + "' )");
+                UpdateCat();
+                UpdateBookTB();
+            }
         }
     }
 }
