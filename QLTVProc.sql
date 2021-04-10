@@ -46,11 +46,14 @@ SELECT SCOPE_IDENTITY();
 GO
 
 CREATE PROCEDURE ThemDMT @MaMuonTra int,@MaSach int,@SL int, @NgayTra datetime
-AS 
+AS
+UPDATE dbo.DauSach
+SET Sl = Sl-@SL
+WHERE MaSach = @MaSach;
 INSERT INTO dbo.D_MuonTra(MaMuonTra,MaSach,SoLuongSach,NgayTra,TinhTrang)
 VALUES      (@MaMuonTra,@MaSach,@SL,@NgayTra,'0');
 GO
-exec ThemDMT @MaMuonTra = '1007',@MaSach ='3',@SL ='3',@NgayTra=null
+exec ThemDMT @MaMuonTra = '1007',@MaSach ='4',@SL ='3',@NgayTra=null
 
 CREATE PROCEDURE LayDMT @MaMuonTra int
 AS 
@@ -62,3 +65,23 @@ INNER JOIN DauSach ON D_MuonTra.MaSach = DauSach.MaSach
 where D_MuonTra.MaMuonTra = @MaMuonTra
 GO
 exec LayDMT '1'
+
+CREATE PROCEDURE XoaMT @MaMuonTra int
+AS
+DELETE D_MuonTra Where D_MuonTra.MaMuonTra = @MaMuonTra
+DELETE MuonTra Where MuonTra.MaMuonTra = @MaMuonTra
+Go
+
+CREATE PROCEDURE XacNhanTra @MaMuonTra int,@MaSach int, @NgayTra datetime
+AS
+UPDATE dbo.D_MuonTra
+SET TinhTrang = '1',NgayTra = @NgayTra
+WHERE MaSach = @MaSach AND MaMuonTra = @MaMuonTra AND TinhTrang = 0;
+GO
+
+CREATE PROCEDURE SuaMT @MaMuonTra int, @MaDocGia int, @NgayHetHan datetime
+AS
+UPDATE dbo.MuonTra
+SET    MaDocGia = @MaDocGia, NgayHetHan = @NgayHetHan
+Where MaMuonTra =@MaMuonTra;
+GO

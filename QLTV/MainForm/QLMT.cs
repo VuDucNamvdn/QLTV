@@ -86,5 +86,36 @@ namespace QLTV.MainForm
             UpdateRentingTB();
             UpdateRentDetailTB();
         }
+
+        private void delBTN_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(IDMTtxtBox.Text))
+            {
+                MessageBox.Show("Mã mượn trả trống");
+                return;
+            }    
+            sQLManager.runqueryWithoutOutput("exec XoaMT @MaMuonTra = '" + IDMTtxtBox.Text + "'");
+            UpdateRentingTB();
+            UpdateRentDetailTB();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            sQLManager.runqueryWithoutOutput("exec XacNhanTra @MaMuonTra = '" + IDMTtxtBox.Text + "',@MaSach = '" + bookID.Text + "',@NgayTra = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"'");
+            UpdateRentDetailTB();
+        }
+
+        private void rentDetailTB_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bookID.Text = rentDetailTB.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void updateBTN_Click(object sender, EventArgs e)
+        {
+            sQLManager.runqueryWithoutOutput("exec SuaMT @MaMuonTra = '" + IDMTtxtBox.Text + "', @MaDocGia ='" + iDDGtxtBox.Text + "', @NgayHetHan = '" + expiryDate.Value.Date.ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            UpdateRentingTB();
+            UpdateRentDetailTB();
+        }
     }
 }

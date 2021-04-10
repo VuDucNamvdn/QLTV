@@ -56,8 +56,11 @@ namespace QLTV.MainForm
         {
             sQLManager.command = sQLManager.connection.CreateCommand();
 
-            //Xóa khóa ngoại trong bảng MuonTra
-            sQLManager.runqueryWithoutOutput( "delete from MuonTra where MaDocGia = '" + IDtxtBox.Text + "'");
+            List<string> mtID = sQLManager.stringDataFromQuery("select MaMuonTra from MuonTra where MaDocGia ='" + IDtxtBox.Text + "'");
+            
+            //Xóa hết khóa ngoại trong bảng MuonTra
+            foreach(var id in mtID)
+                sQLManager.runqueryWithoutOutput("exec XoaMT @MaMuonTra = '" + id + "'");
 
 
             //Xóa độc giả trong bảng Docgia
