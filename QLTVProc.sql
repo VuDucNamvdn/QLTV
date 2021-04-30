@@ -16,7 +16,6 @@ AS
     ON TheLoai.MaTheLoai = DauSach.MaTheLoai  
     ORDER BY MaSach; 
 Go
-exec LaySach
 
 CREATE PROCEDURE ThemTheLoai @TenTheLoai nvarchar(100)
 AS
@@ -53,18 +52,16 @@ WHERE MaSach = @MaSach;
 INSERT INTO dbo.D_MuonTra(MaMuonTra,MaSach,SoLuongSach,NgayTra,TinhTrang)
 VALUES      (@MaMuonTra,@MaSach,@SL,@NgayTra,'0');
 GO
-exec ThemDMT @MaMuonTra = '1007',@MaSach ='4',@SL ='3',@NgayTra=null
 
 CREATE PROCEDURE LayDMT @MaMuonTra int
 AS 
-SELECT D_MuonTra.MaSach,DauSach.TenSach,D_MuonTra.SoLuongSach,
+SELECT D_MuonTra.MaSach,DauSach.TenSach,
     CASE WHEN D_MuonTra.TinhTrang = 1 THEN N'Đã trả' ELSE N'Chưa trả' END, D_MuonTra.NgayTra 
 FROM
     D_MuonTra
 INNER JOIN DauSach ON D_MuonTra.MaSach = DauSach.MaSach  
 where D_MuonTra.MaMuonTra = @MaMuonTra
 GO
-exec LayDMT '1'
 
 CREATE PROCEDURE XoaMT @MaMuonTra int
 AS
@@ -85,3 +82,21 @@ UPDATE dbo.MuonTra
 SET    MaDocGia = @MaDocGia, NgayHetHan = @NgayHetHan
 Where MaMuonTra =@MaMuonTra;
 GO
+
+
+CREATE PROCEDURE SuaD_MT @MaMuonTra int,@MaSach int, @MaSachBanDau int
+AS 
+UPDATE D_MuonTra
+Set MaSach = @MaSach
+where D_MuonTra.MaMuonTra = @MaMuonTra And MaSach = @MaSachBanDau 
+GO
+
+CREATE PROCEDURE XoaD_MT @MaMuonTra int, @MaSach int
+As
+delete D_MuonTra where D_MuonTra.MaSach = @MaSach and D_MuonTra.MaMuonTra = @MaMuonTra
+Declare @cnt int
+select @cnt = COUNT(D_MuonTra.MaSach) from D_MuonTra where D_MuonTra.MaMuonTra = @MaMuonTra
+IF @cnt <1
+    delete MuonTra where MuonTra.MaMuonTra = @MaMuonTra;
+GO
+drop proc SuaD_MT

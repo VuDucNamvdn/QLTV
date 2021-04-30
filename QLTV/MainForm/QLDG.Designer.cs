@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLDG));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -44,6 +45,9 @@
             this.updateBTN = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.docGiaDataTB = new System.Windows.Forms.DataGridView();
+            this.searchBTN = new System.Windows.Forms.Button();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,6 +80,9 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.searchBTN);
+            this.panel5.Controls.Add(this.searchBar);
+            this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.IDtxtBox);
             this.panel5.Controls.Add(this.expiryDate);
@@ -94,7 +101,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 19);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã độc giả: ";
             // 
@@ -102,14 +109,14 @@
             // 
             this.IDtxtBox.Location = new System.Drawing.Point(103, 24);
             this.IDtxtBox.Name = "IDtxtBox";
-            this.IDtxtBox.Size = new System.Drawing.Size(133, 22);
+            this.IDtxtBox.Size = new System.Drawing.Size(133, 19);
             this.IDtxtBox.TabIndex = 1;
             // 
             // expiryDate
             // 
             this.expiryDate.Location = new System.Drawing.Point(104, 74);
             this.expiryDate.Name = "expiryDate";
-            this.expiryDate.Size = new System.Drawing.Size(200, 22);
+            this.expiryDate.Size = new System.Drawing.Size(200, 19);
             this.expiryDate.TabIndex = 5;
             // 
             // label2
@@ -118,7 +125,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 19);
+            this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên độc giả: ";
             // 
@@ -128,7 +135,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 19);
+            this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày hết hạn: ";
             // 
@@ -136,7 +143,7 @@
             // 
             this.NametxtBox.Location = new System.Drawing.Point(103, 52);
             this.NametxtBox.Name = "NametxtBox";
-            this.NametxtBox.Size = new System.Drawing.Size(133, 22);
+            this.NametxtBox.Size = new System.Drawing.Size(133, 19);
             this.NametxtBox.TabIndex = 3;
             // 
             // panel4
@@ -215,9 +222,37 @@
             this.docGiaDataTB.TabIndex = 0;
             this.docGiaDataTB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.docGiaDataTB_CellMouseClick);
             // 
+            // searchBTN
+            // 
+            this.searchBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.searchBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchBTN.Image = ((System.Drawing.Image)(resources.GetObject("searchBTN.Image")));
+            this.searchBTN.Location = new System.Drawing.Point(157, 140);
+            this.searchBTN.Name = "searchBTN";
+            this.searchBTN.Size = new System.Drawing.Size(30, 30);
+            this.searchBTN.TabIndex = 23;
+            this.searchBTN.UseVisualStyleBackColor = true;
+            // 
+            // searchBar
+            // 
+            this.searchBar.Location = new System.Drawing.Point(10, 151);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(133, 19);
+            this.searchBar.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 16);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Tìm kiếm thông tin độc giả: ";
+            // 
             // QLDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1182, 673);
@@ -253,5 +288,8 @@
         private System.Windows.Forms.Button addBTN;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button searchBTN;
+        private System.Windows.Forms.TextBox searchBar;
+        private System.Windows.Forms.Label label4;
     }
 }

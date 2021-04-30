@@ -77,6 +77,19 @@
     <Compile Include="Account\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\Helper.Designer.cs">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HelpPictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helpers\HelpPictureBox.Designer.cs">
+      <DependentUpon>HelpPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="MainForm\QLSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DraggableForm.resx">
       <DependentUpon>DraggableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\Helper.resx">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\HelpPictureBox.resx">
+      <DependentUpon>HelpPictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\QLSach.resx">
       <DependentUpon>QLSach.cs</DependentUpon>

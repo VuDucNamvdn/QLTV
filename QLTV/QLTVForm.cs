@@ -20,7 +20,6 @@ namespace QLTV
         public QLTVForm(string iD,int _Role)
         {
             InitializeComponent();
-
             #region Tinh chỉnh giao diện
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 50);
@@ -50,6 +49,7 @@ namespace QLTV
             }
             #endregion
         }
+
         #region Đổi màu phím
         private void ActivateButton(object senderBtn, Color color)
         {

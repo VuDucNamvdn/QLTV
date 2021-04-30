@@ -36,11 +36,10 @@ namespace QLTV
             bookToAddTB.Columns[2].HeaderText = "Thể loại";
             bookToAddTB.Columns[3].HeaderText = "Số lượng tồn";
             mydefine.ResizeDataTB(bookToAddTB);
-            bookAddedToRentTB.ColumnCount = 4;
+            bookAddedToRentTB.ColumnCount = 3;
             bookAddedToRentTB.Columns[0].Name = "Mã sách";
             bookAddedToRentTB.Columns[1].Name = "Tên sách";
             bookAddedToRentTB.Columns[2].Name = "Thể loại";
-            bookAddedToRentTB.Columns[3].Name = "Số lượng mượn";
         }
 
         private void addToRentBTN_Click(object sender, EventArgs e)
@@ -50,15 +49,24 @@ namespace QLTV
             {
                 if (bookID.Text == row.Cells[0].Value.ToString())
                 {
-                    if(nOfBooks.Value>0&&nOfBooks.Value<= (int)row.Cells[3].Value)
+                    if((int)row.Cells[3].Value > 0)
                     {
+                        for(int i = 0; i< bookAddedToRentTB.Rows.Count;i++)
+                        {
+                            if (bookAddedToRentTB.Rows[i].Cells[0].Value == null) continue;
+                            if(bookAddedToRentTB.Rows[i].Cells[0].Value.ToString() == bookID.Text)
+                            {
+                                MessageBox.Show("Đã có sách trong danh sách");
+                                return;
+                            }    
+                        }    
                         string[] rowData = new string[] { bookID.Text, row.Cells[1].Value.ToString(),
-                                                        row.Cells[2].Value.ToString(), nOfBooks.Value.ToString()};
+                                                        row.Cells[2].Value.ToString()};
                         bookAddedToRentTB.Rows.Add(rowData);
                     }
                     else
                     {
-                        MessageBox.Show("Nhập sai số lượng cho mượn");
+                        MessageBox.Show("Không còn sách trong kho");
                     }    
                     break;
                 }

@@ -25,7 +25,6 @@ namespace QLTV.MainForm
             try
             {
                 sQLManager = new SQLManager(mydefine.dataSource);
-                IDtxtBox.ReadOnly = true;
                 UpdateBookTB();
                 UpdateCat();
             }

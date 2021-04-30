@@ -36,14 +36,11 @@ namespace QLTV
             this.label2 = new System.Windows.Forms.Label();
             this.delFromRentBTN = new System.Windows.Forms.Button();
             this.addToRentBTN = new System.Windows.Forms.Button();
-            this.nOfBooks = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bookToAddTB = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bookAddedToRentTB = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nOfBooks)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookToAddTB)).BeginInit();
             this.panel3.SuspendLayout();
@@ -58,8 +55,6 @@ namespace QLTV
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.delFromRentBTN);
             this.panel1.Controls.Add(this.addToRentBTN);
-            this.panel1.Controls.Add(this.nOfBooks);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -131,22 +126,6 @@ namespace QLTV
             this.addToRentBTN.UseVisualStyleBackColor = true;
             this.addToRentBTN.Click += new System.EventHandler(this.addToRentBTN_Click);
             // 
-            // nOfBooks
-            // 
-            this.nOfBooks.Location = new System.Drawing.Point(99, 78);
-            this.nOfBooks.Name = "nOfBooks";
-            this.nOfBooks.Size = new System.Drawing.Size(55, 20);
-            this.nOfBooks.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số lượng mượn:";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
@@ -205,7 +184,6 @@ namespace QLTV
             this.Text = "BookTB";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nOfBooks)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookToAddTB)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -217,8 +195,6 @@ namespace QLTV
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.NumericUpDown nOfBooks;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView bookToAddTB;
         private System.Windows.Forms.Button addToRentBTN;

@@ -18,7 +18,6 @@ namespace QLTV.MainForm
         public QLDG()
         {
             InitializeComponent();
-            IDtxtBox.ReadOnly = true;
             try
             {
                 sQLManager = new SQLManager(mydefine.dataSource);

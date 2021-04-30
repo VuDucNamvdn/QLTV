@@ -17,6 +17,16 @@ namespace QLTV
         public DraggableForm()
         {
             InitializeComponent();
+            KeyPreview = true;
+            KeyDown += new KeyEventHandler(Form_KeyDown);
+        }
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                var helperDialog = new Helpers.Helper();
+                helperDialog.ShowDialog();
+            }
         }
         private void DraggableForm_MouseDown(object sender, MouseEventArgs e)
         {

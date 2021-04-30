@@ -51,15 +51,19 @@ namespace QLTV.MainForm
             this.rentingDataTB = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.bookID = new System.Windows.Forms.TextBox();
-            this.NameDGtxtBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.searchForRentingInfoBTN = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.updateBTN = new System.Windows.Forms.Button();
             this.addBTN = new System.Windows.Forms.Button();
             this.delBTN = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.editDMT = new System.Windows.Forms.Button();
+            this.delDMT = new System.Windows.Forms.Button();
+            this.bookID = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.NameDGtxtBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.searchForRentingInfoBTN = new System.Windows.Forms.Button();
             this.bookSearchBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,6 +72,8 @@ namespace QLTV.MainForm
             this.IDMTtxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.expiryDate = new System.Windows.Forms.DateTimePicker();
+            this.newBookID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,6 +90,8 @@ namespace QLTV.MainForm
             ((System.ComponentModel.ISupportInitialize)(this.rentingDataTB)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -307,12 +315,11 @@ namespace QLTV.MainForm
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.bookID);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.panel14);
             this.panel7.Controls.Add(this.NameDGtxtBox);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.searchForRentingInfoBTN);
-            this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.bookSearchBox);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label1);
@@ -327,62 +334,17 @@ namespace QLTV.MainForm
             this.panel7.Size = new System.Drawing.Size(314, 470);
             this.panel7.TabIndex = 8;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 309);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 16);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Mã sách:";
-            // 
-            // bookID
-            // 
-            this.bookID.Location = new System.Drawing.Point(72, 309);
-            this.bookID.Name = "bookID";
-            this.bookID.Size = new System.Drawing.Size(133, 19);
-            this.bookID.TabIndex = 24;
-            // 
-            // NameDGtxtBox
-            // 
-            this.NameDGtxtBox.Location = new System.Drawing.Point(114, 75);
-            this.NameDGtxtBox.Name = "NameDGtxtBox";
-            this.NameDGtxtBox.Size = new System.Drawing.Size(133, 19);
-            this.NameDGtxtBox.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 71);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 16);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Tên độc giả: ";
-            // 
-            // searchForRentingInfoBTN
-            // 
-            this.searchForRentingInfoBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.searchForRentingInfoBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchForRentingInfoBTN.Image = ((System.Drawing.Image)(resources.GetObject("searchForRentingInfoBTN.Image")));
-            this.searchForRentingInfoBTN.Location = new System.Drawing.Point(157, 150);
-            this.searchForRentingInfoBTN.Name = "searchForRentingInfoBTN";
-            this.searchForRentingInfoBTN.Size = new System.Drawing.Size(30, 30);
-            this.searchForRentingInfoBTN.TabIndex = 20;
-            this.searchForRentingInfoBTN.UseVisualStyleBackColor = true;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.updateBTN);
             this.panel8.Controls.Add(this.addBTN);
             this.panel8.Controls.Add(this.delBTN);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 410);
+            this.panel8.Location = new System.Drawing.Point(0, 212);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(10);
             this.panel8.Size = new System.Drawing.Size(312, 58);
-            this.panel8.TabIndex = 12;
+            this.panel8.TabIndex = 26;
             // 
             // updateBTN
             // 
@@ -419,6 +381,99 @@ namespace QLTV.MainForm
             this.delBTN.Text = "Xóa";
             this.delBTN.UseVisualStyleBackColor = true;
             this.delBTN.Click += new System.EventHandler(this.delBTN_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.newBookID);
+            this.panel14.Controls.Add(this.label9);
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Controls.Add(this.bookID);
+            this.panel14.Controls.Add(this.label8);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(0, 270);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(312, 198);
+            this.panel14.TabIndex = 25;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.editDMT);
+            this.panel15.Controls.Add(this.delDMT);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel15.Location = new System.Drawing.Point(0, 140);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(10);
+            this.panel15.Size = new System.Drawing.Size(312, 58);
+            this.panel15.TabIndex = 27;
+            // 
+            // editDMT
+            // 
+            this.editDMT.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.editDMT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editDMT.Location = new System.Drawing.Point(120, 7);
+            this.editDMT.Name = "editDMT";
+            this.editDMT.Size = new System.Drawing.Size(80, 38);
+            this.editDMT.TabIndex = 14;
+            this.editDMT.Text = "Sửa";
+            this.editDMT.UseVisualStyleBackColor = true;
+            this.editDMT.Click += new System.EventHandler(this.editDMT_Click);
+            // 
+            // delDMT
+            // 
+            this.delDMT.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.delDMT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delDMT.Location = new System.Drawing.Point(226, 7);
+            this.delDMT.Name = "delDMT";
+            this.delDMT.Size = new System.Drawing.Size(80, 38);
+            this.delDMT.TabIndex = 15;
+            this.delDMT.Text = "Xóa";
+            this.delDMT.UseVisualStyleBackColor = true;
+            this.delDMT.Click += new System.EventHandler(this.delDMT_Click);
+            // 
+            // bookID
+            // 
+            this.bookID.Location = new System.Drawing.Point(120, 20);
+            this.bookID.Name = "bookID";
+            this.bookID.Size = new System.Drawing.Size(133, 19);
+            this.bookID.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(8, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 16);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Mã sách:";
+            // 
+            // NameDGtxtBox
+            // 
+            this.NameDGtxtBox.Location = new System.Drawing.Point(114, 75);
+            this.NameDGtxtBox.Name = "NameDGtxtBox";
+            this.NameDGtxtBox.Size = new System.Drawing.Size(133, 19);
+            this.NameDGtxtBox.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 71);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 16);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Tên độc giả: ";
+            // 
+            // searchForRentingInfoBTN
+            // 
+            this.searchForRentingInfoBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.searchForRentingInfoBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchForRentingInfoBTN.Image = ((System.Drawing.Image)(resources.GetObject("searchForRentingInfoBTN.Image")));
+            this.searchForRentingInfoBTN.Location = new System.Drawing.Point(157, 150);
+            this.searchForRentingInfoBTN.Name = "searchForRentingInfoBTN";
+            this.searchForRentingInfoBTN.Size = new System.Drawing.Size(30, 30);
+            this.searchForRentingInfoBTN.TabIndex = 20;
+            this.searchForRentingInfoBTN.UseVisualStyleBackColor = true;
             // 
             // bookSearchBox
             // 
@@ -488,6 +543,23 @@ namespace QLTV.MainForm
             this.expiryDate.Size = new System.Drawing.Size(200, 19);
             this.expiryDate.TabIndex = 5;
             // 
+            // newBookID
+            // 
+            this.newBookID.Location = new System.Drawing.Point(120, 48);
+            this.newBookID.Name = "newBookID";
+            this.newBookID.Size = new System.Drawing.Size(133, 19);
+            this.newBookID.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Mã sách mới:";
+            // 
             // QLMT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -518,6 +590,9 @@ namespace QLTV.MainForm
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -534,10 +609,6 @@ namespace QLTV.MainForm
         private System.Windows.Forms.TextBox IDMTtxtBox;
         private System.Windows.Forms.TextBox iDDGtxtBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button updateBTN;
-        private System.Windows.Forms.Button addBTN;
-        private System.Windows.Forms.Button delBTN;
         private System.Windows.Forms.Button searchForRentingInfoBTN;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
@@ -557,7 +628,17 @@ namespace QLTV.MainForm
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox NameDGtxtBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox bookID;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button updateBTN;
+        private System.Windows.Forms.Button addBTN;
+        private System.Windows.Forms.Button delBTN;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button editDMT;
+        private System.Windows.Forms.Button delDMT;
+        private System.Windows.Forms.TextBox newBookID;
+        private System.Windows.Forms.Label label9;
     }
 }

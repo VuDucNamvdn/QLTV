@@ -16,7 +16,6 @@ namespace QLTV.MainForm
         public QLMT()
         {
             InitializeComponent();
-            IDMTtxtBox.ReadOnly = true;
             try
             {
                 sQLManager = new SQLManager(mydefine.dataSource);
@@ -66,14 +65,18 @@ namespace QLTV.MainForm
             sQLManager.getDataToDataGridView("exec LayDMT '" + IDMTtxtBox.Text + "'", rentDetailTB);
             rentDetailTB.Columns[0].HeaderText = "Mã sách";
             rentDetailTB.Columns[1].HeaderText = "Tên sách";
-            rentDetailTB.Columns[2].HeaderText = "Số lượng sách";
-            rentDetailTB.Columns[3].HeaderText = "Tình trạng";
-            rentDetailTB.Columns[4].HeaderText = "Ngày trả";
+            rentDetailTB.Columns[2].HeaderText = "Tình trạng";
+            rentDetailTB.Columns[3].HeaderText = "Ngày trả";
             mydefine.ResizeDataTB(rentDetailTB);
         }
 
         private void addBTN_Click(object sender, EventArgs e)
         {
+            if(bookToRentTB.Rows.Count < 1)
+            {
+                MessageBox.Show("Chưa thêm sách để cho mượn");
+                return;
+            }    
             string idMT = sQLManager.stringDataFromQuery("exec ThemMT @MaDocGia ='" + iDDGtxtBox.Text + "', @NgayHetHan = '" + expiryDate.Value.Date.ToString("yyyy-MM-dd HH:mm:ss") + "'")[0];
             foreach(DataGridViewRow row in bookToRentTB.Rows)
             {
@@ -81,7 +84,8 @@ namespace QLTV.MainForm
                 {
                     continue;
                 }    
-                sQLManager.runqueryWithoutOutput("exec ThemDMT @MaMuonTra = '"+idMT+"',@MaSach ='"+row.Cells[0].Value.ToString() +"',@SL ='"+ row.Cells[3].Value.ToString() + "',@NgayTra=null");
+                sQLManager.runqueryWithoutOutput("exec ThemDMT @MaMuonTra = '"+idMT+"',@MaSach ='"
+                                                    +row.Cells[0].Value.ToString() +"',@SL ='1',@NgayTra=null");
             }
             UpdateRentingTB();
             UpdateRentDetailTB();
@@ -114,6 +118,19 @@ namespace QLTV.MainForm
         private void updateBTN_Click(object sender, EventArgs e)
         {
             sQLManager.runqueryWithoutOutput("exec SuaMT @MaMuonTra = '" + IDMTtxtBox.Text + "', @MaDocGia ='" + iDDGtxtBox.Text + "', @NgayHetHan = '" + expiryDate.Value.Date.ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            UpdateRentingTB();
+            UpdateRentDetailTB();
+        }
+
+        private void editDMT_Click(object sender, EventArgs e)
+        {
+            sQLManager.runqueryWithoutOutput("exec SuaD_MT @MaMuonTra = '" + IDMTtxtBox.Text + "', @MaSach ='" + newBookID.Text + "'" + ", @MaSachBanDau ='" + bookID.Text + "'");
+            UpdateRentDetailTB();
+        }
+
+        private void delDMT_Click(object sender, EventArgs e)
+        {
+            sQLManager.runqueryWithoutOutput("exec XoaD_MT @MaMuonTra = '" + IDMTtxtBox.Text + "', @MaSach ='" + bookID.Text + "'");
             UpdateRentingTB();
             UpdateRentDetailTB();
         }
