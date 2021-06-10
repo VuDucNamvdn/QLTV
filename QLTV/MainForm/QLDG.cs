@@ -102,5 +102,11 @@ namespace QLTV.MainForm
             sQLManager.runqueryWithoutOutput("Update Docgia set TenDocGia = N'" + NametxtBox.Text + "', NgayHetHan = '" + expiryDate.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' where MaDocGia = '"+ IDtxtBox.Text + "'");
             UpdateDGTB();
         }
+
+        private void searchBTN_Click(object sender, EventArgs e)
+        {
+            sQLManager.getDataToDataGridView("select * from DocGia where MaDocGia ='"+searchBar.Text+"'", docGiaDataTB);
+            mydefine.ResizeDataTB(docGiaDataTB);
+        }
     }
 }

@@ -56,6 +56,8 @@ namespace QLTV.MainForm
             this.addBTN = new System.Windows.Forms.Button();
             this.delBTN = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.newBookID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.editDMT = new System.Windows.Forms.Button();
             this.delDMT = new System.Windows.Forms.Button();
@@ -64,7 +66,7 @@ namespace QLTV.MainForm
             this.NameDGtxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.searchForRentingInfoBTN = new System.Windows.Forms.Button();
-            this.bookSearchBox = new System.Windows.Forms.TextBox();
+            this.searchBar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iDDGtxtBox = new System.Windows.Forms.TextBox();
@@ -72,8 +74,6 @@ namespace QLTV.MainForm
             this.IDMTtxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.expiryDate = new System.Windows.Forms.DateTimePicker();
-            this.newBookID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -320,7 +320,7 @@ namespace QLTV.MainForm
             this.panel7.Controls.Add(this.NameDGtxtBox);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.searchForRentingInfoBTN);
-            this.panel7.Controls.Add(this.bookSearchBox);
+            this.panel7.Controls.Add(this.searchBar);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.iDDGtxtBox);
@@ -394,6 +394,23 @@ namespace QLTV.MainForm
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(312, 198);
             this.panel14.TabIndex = 25;
+            // 
+            // newBookID
+            // 
+            this.newBookID.Location = new System.Drawing.Point(120, 48);
+            this.newBookID.Name = "newBookID";
+            this.newBookID.Size = new System.Drawing.Size(133, 19);
+            this.newBookID.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Mã sách mới:";
             // 
             // panel15
             // 
@@ -474,13 +491,14 @@ namespace QLTV.MainForm
             this.searchForRentingInfoBTN.Size = new System.Drawing.Size(30, 30);
             this.searchForRentingInfoBTN.TabIndex = 20;
             this.searchForRentingInfoBTN.UseVisualStyleBackColor = true;
+            this.searchForRentingInfoBTN.Click += new System.EventHandler(this.searchForRentingInfoBTN_Click);
             // 
-            // bookSearchBox
+            // searchBar
             // 
-            this.bookSearchBox.Location = new System.Drawing.Point(10, 161);
-            this.bookSearchBox.Name = "bookSearchBox";
-            this.bookSearchBox.Size = new System.Drawing.Size(133, 19);
-            this.bookSearchBox.TabIndex = 3;
+            this.searchBar.Location = new System.Drawing.Point(10, 161);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(133, 19);
+            this.searchBar.TabIndex = 3;
             // 
             // label4
             // 
@@ -543,23 +561,6 @@ namespace QLTV.MainForm
             this.expiryDate.Size = new System.Drawing.Size(200, 19);
             this.expiryDate.TabIndex = 5;
             // 
-            // newBookID
-            // 
-            this.newBookID.Location = new System.Drawing.Point(120, 48);
-            this.newBookID.Name = "newBookID";
-            this.newBookID.Size = new System.Drawing.Size(133, 19);
-            this.newBookID.TabIndex = 29;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 51);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 16);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Mã sách mới:";
-            // 
             // QLMT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -602,7 +603,7 @@ namespace QLTV.MainForm
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox bookSearchBox;
+        private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.DateTimePicker expiryDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;

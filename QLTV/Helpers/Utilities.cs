@@ -42,4 +42,8 @@ namespace Helpers
             }
         }
     }
+	class define    
+    {
+        public const string dataSource = @"Data Source=DESKTOP-3PP3KKO;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+    }
 }

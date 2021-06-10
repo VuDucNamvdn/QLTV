@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLDG));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.searchBTN = new System.Windows.Forms.Button();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.IDtxtBox = new System.Windows.Forms.TextBox();
             this.expiryDate = new System.Windows.Forms.DateTimePicker();
@@ -45,9 +48,6 @@
             this.updateBTN = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.docGiaDataTB = new System.Windows.Forms.DataGridView();
-            this.searchBTN = new System.Windows.Forms.Button();
-            this.searchBar = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -94,6 +94,35 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(369, 256);
             this.panel5.TabIndex = 10;
+            // 
+            // searchBTN
+            // 
+            this.searchBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.searchBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchBTN.Image = ((System.Drawing.Image)(resources.GetObject("searchBTN.Image")));
+            this.searchBTN.Location = new System.Drawing.Point(157, 140);
+            this.searchBTN.Name = "searchBTN";
+            this.searchBTN.Size = new System.Drawing.Size(30, 30);
+            this.searchBTN.TabIndex = 23;
+            this.searchBTN.UseVisualStyleBackColor = true;
+            this.searchBTN.Click += new System.EventHandler(this.searchBTN_Click);
+            // 
+            // searchBar
+            // 
+            this.searchBar.Location = new System.Drawing.Point(10, 151);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(133, 19);
+            this.searchBar.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 16);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Tìm kiếm thông tin độc giả: ";
             // 
             // label1
             // 
@@ -221,34 +250,6 @@
             this.docGiaDataTB.Size = new System.Drawing.Size(1172, 407);
             this.docGiaDataTB.TabIndex = 0;
             this.docGiaDataTB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.docGiaDataTB_CellMouseClick);
-            // 
-            // searchBTN
-            // 
-            this.searchBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.searchBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBTN.Image = ((System.Drawing.Image)(resources.GetObject("searchBTN.Image")));
-            this.searchBTN.Location = new System.Drawing.Point(157, 140);
-            this.searchBTN.Name = "searchBTN";
-            this.searchBTN.Size = new System.Drawing.Size(30, 30);
-            this.searchBTN.TabIndex = 23;
-            this.searchBTN.UseVisualStyleBackColor = true;
-            // 
-            // searchBar
-            // 
-            this.searchBar.Location = new System.Drawing.Point(10, 151);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(133, 19);
-            this.searchBar.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 16);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Tìm kiếm thông tin độc giả: ";
             // 
             // QLDG
             // 

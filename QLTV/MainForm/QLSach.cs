@@ -128,5 +128,11 @@ namespace QLTV.MainForm
                 UpdateBookTB();
             }
         }
+
+        private void searchForBookBTN_Click(object sender, EventArgs e)
+        {
+            sQLManager.getDataToDataGridView("select * from DauSach where MaSach = '" + searchBar.Text + "'", bookDataTB);
+            mydefine.ResizeDataTB(bookDataTB);
+        }
     }
 }

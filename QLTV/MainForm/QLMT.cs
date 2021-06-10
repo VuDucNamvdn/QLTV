@@ -134,5 +134,11 @@ namespace QLTV.MainForm
             UpdateRentingTB();
             UpdateRentDetailTB();
         }
+
+        private void searchForRentingInfoBTN_Click(object sender, EventArgs e)
+        {
+            sQLManager.getDataToDataGridView("select * from MuonTra where MaMuonTra ='" + searchBar.Text + "'", rentingDataTB);
+            mydefine.ResizeDataTB(rentingDataTB);
+        }
     }
 }
