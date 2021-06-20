@@ -137,7 +137,7 @@ namespace QLTV.MainForm
 
         private void searchForRentingInfoBTN_Click(object sender, EventArgs e)
         {
-            sQLManager.getDataToDataGridView("select * from MuonTra where MaMuonTra ='" + searchBar.Text + "'", rentingDataTB);
+            sQLManager.getDataToDataGridView("select * from MuonTra where MaMuonTra Like'%" + searchBar.Text + "%'", rentingDataTB);
             mydefine.ResizeDataTB(rentingDataTB);
         }
     }

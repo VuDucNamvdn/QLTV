@@ -105,7 +105,7 @@ namespace QLTV.MainForm
 
         private void searchBTN_Click(object sender, EventArgs e)
         {
-            sQLManager.getDataToDataGridView("select * from DocGia where MaDocGia ='"+searchBar.Text+"'", docGiaDataTB);
+            sQLManager.getDataToDataGridView("select * from DocGia where MaDocGia Like'%" + searchBar.Text+"%'", docGiaDataTB);
             mydefine.ResizeDataTB(docGiaDataTB);
         }
     }

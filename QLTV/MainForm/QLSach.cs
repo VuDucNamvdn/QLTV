@@ -131,7 +131,7 @@ namespace QLTV.MainForm
 
         private void searchForBookBTN_Click(object sender, EventArgs e)
         {
-            sQLManager.getDataToDataGridView("select * from DauSach where MaSach = '" + searchBar.Text + "'", bookDataTB);
+            sQLManager.getDataToDataGridView("select * from DauSach where MaSach Like'%" + searchBar.Text + "%'", bookDataTB);
             mydefine.ResizeDataTB(bookDataTB);
         }
     }
