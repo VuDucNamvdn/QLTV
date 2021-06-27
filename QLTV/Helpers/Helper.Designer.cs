@@ -70,8 +70,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 57);
+            this.panel1.Size = new System.Drawing.Size(1176, 70);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -81,9 +82,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(30);
+            this.label1.Margin = new System.Windows.Forms.Padding(40, 37, 40, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(882, 57);
+            this.label1.Size = new System.Drawing.Size(1176, 70);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hướng dẫn sử dụng phần mềm QLTV";
             // 
@@ -95,9 +96,10 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(690, 57);
+            this.panel2.Location = new System.Drawing.Point(920, 70);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 459);
+            this.panel2.Size = new System.Drawing.Size(256, 565);
             this.panel2.TabIndex = 1;
             // 
             // panel8
@@ -108,19 +110,21 @@
             this.panel8.Controls.Add(this.label4);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.ForeColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 242);
+            this.panel8.Location = new System.Drawing.Point(0, 298);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel8.Size = new System.Drawing.Size(192, 124);
+            this.panel8.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.panel8.Size = new System.Drawing.Size(256, 153);
             this.panel8.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 72);
+            this.button1.Location = new System.Drawing.Point(0, 89);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 52);
+            this.button1.Size = new System.Drawing.Size(256, 64);
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
@@ -132,19 +136,21 @@
             this.panel9.Controls.Add(this.button3);
             this.panel9.Controls.Add(this.button4);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 18);
+            this.panel9.Location = new System.Drawing.Point(0, 23);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.panel9.Size = new System.Drawing.Size(192, 54);
+            this.panel9.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel9.Size = new System.Drawing.Size(256, 66);
             this.panel9.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(128, 3);
+            this.button2.Location = new System.Drawing.Point(170, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 51);
+            this.button2.Size = new System.Drawing.Size(85, 62);
             this.button2.TabIndex = 2;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
@@ -154,9 +160,10 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Left;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(64, 3);
+            this.button3.Location = new System.Drawing.Point(85, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 51);
+            this.button3.Size = new System.Drawing.Size(85, 62);
             this.button3.TabIndex = 1;
             this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
@@ -166,9 +173,10 @@
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Left;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 3);
+            this.button4.Location = new System.Drawing.Point(0, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(64, 51);
+            this.button4.Size = new System.Drawing.Size(85, 62);
             this.button4.TabIndex = 0;
             this.button4.Text = "Thêm";
             this.button4.UseVisualStyleBackColor = true;
@@ -178,9 +186,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(0, 5);
+            this.label4.Location = new System.Drawing.Point(0, 6);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sách";
             // 
@@ -192,19 +201,21 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(0, 118);
+            this.panel6.Location = new System.Drawing.Point(0, 145);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel6.Size = new System.Drawing.Size(192, 124);
+            this.panel6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.panel6.Size = new System.Drawing.Size(256, 153);
             this.panel6.TabIndex = 1;
             // 
             // searchTeacherHelperBTN
             // 
             this.searchTeacherHelperBTN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTeacherHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchTeacherHelperBTN.Location = new System.Drawing.Point(0, 72);
+            this.searchTeacherHelperBTN.Location = new System.Drawing.Point(0, 89);
+            this.searchTeacherHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchTeacherHelperBTN.Name = "searchTeacherHelperBTN";
-            this.searchTeacherHelperBTN.Size = new System.Drawing.Size(192, 52);
+            this.searchTeacherHelperBTN.Size = new System.Drawing.Size(256, 64);
             this.searchTeacherHelperBTN.TabIndex = 2;
             this.searchTeacherHelperBTN.Text = "Tìm kiếm";
             this.searchTeacherHelperBTN.UseVisualStyleBackColor = true;
@@ -216,19 +227,21 @@
             this.panel7.Controls.Add(this.editTeacherHelperBTN);
             this.panel7.Controls.Add(this.addTeacherHelperBTN);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 18);
+            this.panel7.Location = new System.Drawing.Point(0, 23);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.panel7.Size = new System.Drawing.Size(192, 54);
+            this.panel7.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel7.Size = new System.Drawing.Size(256, 66);
             this.panel7.TabIndex = 1;
             // 
             // delTeacherHelperBTN
             // 
             this.delTeacherHelperBTN.Dock = System.Windows.Forms.DockStyle.Left;
             this.delTeacherHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delTeacherHelperBTN.Location = new System.Drawing.Point(128, 3);
+            this.delTeacherHelperBTN.Location = new System.Drawing.Point(170, 4);
+            this.delTeacherHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delTeacherHelperBTN.Name = "delTeacherHelperBTN";
-            this.delTeacherHelperBTN.Size = new System.Drawing.Size(64, 51);
+            this.delTeacherHelperBTN.Size = new System.Drawing.Size(85, 62);
             this.delTeacherHelperBTN.TabIndex = 2;
             this.delTeacherHelperBTN.Text = "Xóa";
             this.delTeacherHelperBTN.UseVisualStyleBackColor = true;
@@ -238,9 +251,10 @@
             // 
             this.editTeacherHelperBTN.Dock = System.Windows.Forms.DockStyle.Left;
             this.editTeacherHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editTeacherHelperBTN.Location = new System.Drawing.Point(64, 3);
+            this.editTeacherHelperBTN.Location = new System.Drawing.Point(85, 4);
+            this.editTeacherHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editTeacherHelperBTN.Name = "editTeacherHelperBTN";
-            this.editTeacherHelperBTN.Size = new System.Drawing.Size(64, 51);
+            this.editTeacherHelperBTN.Size = new System.Drawing.Size(85, 62);
             this.editTeacherHelperBTN.TabIndex = 1;
             this.editTeacherHelperBTN.Text = "Sửa";
             this.editTeacherHelperBTN.UseVisualStyleBackColor = true;
@@ -250,9 +264,10 @@
             // 
             this.addTeacherHelperBTN.Dock = System.Windows.Forms.DockStyle.Left;
             this.addTeacherHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addTeacherHelperBTN.Location = new System.Drawing.Point(0, 3);
+            this.addTeacherHelperBTN.Location = new System.Drawing.Point(0, 4);
+            this.addTeacherHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addTeacherHelperBTN.Name = "addTeacherHelperBTN";
-            this.addTeacherHelperBTN.Size = new System.Drawing.Size(64, 51);
+            this.addTeacherHelperBTN.Size = new System.Drawing.Size(85, 62);
             this.addTeacherHelperBTN.TabIndex = 0;
             this.addTeacherHelperBTN.Text = "Thêm";
             this.addTeacherHelperBTN.UseVisualStyleBackColor = true;
@@ -262,9 +277,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(0, 5);
+            this.label3.Location = new System.Drawing.Point(0, 6);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mượn trả";
             // 
@@ -275,8 +291,9 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 118);
+            this.panel3.Size = new System.Drawing.Size(256, 145);
             this.panel3.TabIndex = 0;
             // 
             // searchStHelperBTN
@@ -285,9 +302,10 @@
             this.searchStHelperBTN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchStHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchStHelperBTN.ForeColor = System.Drawing.Color.White;
-            this.searchStHelperBTN.Location = new System.Drawing.Point(0, 67);
+            this.searchStHelperBTN.Location = new System.Drawing.Point(0, 83);
+            this.searchStHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchStHelperBTN.Name = "searchStHelperBTN";
-            this.searchStHelperBTN.Size = new System.Drawing.Size(192, 51);
+            this.searchStHelperBTN.Size = new System.Drawing.Size(256, 62);
             this.searchStHelperBTN.TabIndex = 2;
             this.searchStHelperBTN.Text = "Tìm kiếm";
             this.searchStHelperBTN.UseVisualStyleBackColor = false;
@@ -299,10 +317,11 @@
             this.panel5.Controls.Add(this.editStHelperBTN);
             this.panel5.Controls.Add(this.addStHelperBTN);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 13);
+            this.panel5.Location = new System.Drawing.Point(0, 17);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(192, 54);
+            this.panel5.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(256, 66);
             this.panel5.TabIndex = 1;
             // 
             // delStHelperBTN
@@ -311,9 +330,10 @@
             this.delStHelperBTN.Dock = System.Windows.Forms.DockStyle.Left;
             this.delStHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delStHelperBTN.ForeColor = System.Drawing.Color.White;
-            this.delStHelperBTN.Location = new System.Drawing.Point(128, 3);
+            this.delStHelperBTN.Location = new System.Drawing.Point(170, 4);
+            this.delStHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delStHelperBTN.Name = "delStHelperBTN";
-            this.delStHelperBTN.Size = new System.Drawing.Size(64, 51);
+            this.delStHelperBTN.Size = new System.Drawing.Size(85, 62);
             this.delStHelperBTN.TabIndex = 2;
             this.delStHelperBTN.Text = "Xóa";
             this.delStHelperBTN.UseVisualStyleBackColor = false;
@@ -325,9 +345,10 @@
             this.editStHelperBTN.Dock = System.Windows.Forms.DockStyle.Left;
             this.editStHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editStHelperBTN.ForeColor = System.Drawing.Color.White;
-            this.editStHelperBTN.Location = new System.Drawing.Point(64, 3);
+            this.editStHelperBTN.Location = new System.Drawing.Point(85, 4);
+            this.editStHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editStHelperBTN.Name = "editStHelperBTN";
-            this.editStHelperBTN.Size = new System.Drawing.Size(64, 51);
+            this.editStHelperBTN.Size = new System.Drawing.Size(85, 62);
             this.editStHelperBTN.TabIndex = 1;
             this.editStHelperBTN.Text = "Sửa";
             this.editStHelperBTN.UseVisualStyleBackColor = false;
@@ -338,9 +359,10 @@
             this.addStHelperBTN.Dock = System.Windows.Forms.DockStyle.Left;
             this.addStHelperBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addStHelperBTN.ForeColor = System.Drawing.Color.White;
-            this.addStHelperBTN.Location = new System.Drawing.Point(0, 3);
+            this.addStHelperBTN.Location = new System.Drawing.Point(0, 4);
+            this.addStHelperBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addStHelperBTN.Name = "addStHelperBTN";
-            this.addStHelperBTN.Size = new System.Drawing.Size(64, 51);
+            this.addStHelperBTN.Size = new System.Drawing.Size(85, 62);
             this.addStHelperBTN.TabIndex = 0;
             this.addStHelperBTN.Text = "Thêm";
             this.addStHelperBTN.UseVisualStyleBackColor = true;
@@ -351,8 +373,9 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Độc giả";
             // 
@@ -360,27 +383,30 @@
             // 
             this.helpBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.helpBox.Location = new System.Drawing.Point(0, 0);
+            this.helpBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.helpBox.Name = "helpBox";
-            this.helpBox.Size = new System.Drawing.Size(690, 459);
+            this.helpBox.Size = new System.Drawing.Size(920, 565);
             this.helpBox.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.helpBox);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 57);
+            this.panel4.Location = new System.Drawing.Point(0, 70);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(690, 459);
+            this.panel4.Size = new System.Drawing.Size(920, 565);
             this.panel4.TabIndex = 2;
             // 
             // Helper
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 516);
+            this.ClientSize = new System.Drawing.Size(1176, 635);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Helper";
             this.Text = "Helper";
             this.panel1.ResumeLayout(false);

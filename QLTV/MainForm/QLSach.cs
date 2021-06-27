@@ -134,5 +134,34 @@ namespace QLTV.MainForm
             sQLManager.getDataToDataGridView("select * from DauSach where MaSach Like'%" + searchBar.Text + "%'", bookDataTB);
             mydefine.ResizeDataTB(bookDataTB);
         }
+
+        //int MaTL;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            if(CategoryBox.Text=="Huyền nhuyễn")
+            {
+                MaTL = 2;
+            }
+
+            if (CategoryBox.Text == "Khoa huyễn")
+            {
+                MaTL = 4;
+            }
+
+            if (CategoryBox.Text == "Nấu ăn")
+            {
+                MaTL = 1003;
+            }
+
+            if (CategoryBox.Text == "Quân sự")
+            {
+                MaTL = 5;
+            }
+
+            sQLManager.runqueryWithoutOutput("Update DauSach set TenSach = N'" + NametxtBox.Text + "', MaTheLoai = " + MaTL+ ", Sl="+ nOfBook.Value + " where MaSach = '" + IDtxtBox.Text + "'");
+            UpdateBookTB();
+        }
+
     }
 }

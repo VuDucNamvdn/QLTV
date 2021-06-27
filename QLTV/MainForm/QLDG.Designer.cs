@@ -111,7 +111,7 @@
             // 
             this.searchBar.Location = new System.Drawing.Point(10, 151);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(133, 19);
+            this.searchBar.Size = new System.Drawing.Size(133, 22);
             this.searchBar.TabIndex = 21;
             // 
             // label4
@@ -120,7 +120,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 16);
+            this.label4.Size = new System.Drawing.Size(201, 19);
             this.label4.TabIndex = 22;
             this.label4.Text = "Tìm kiếm thông tin độc giả: ";
             // 
@@ -130,7 +130,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã độc giả: ";
             // 
@@ -138,14 +138,15 @@
             // 
             this.IDtxtBox.Location = new System.Drawing.Point(103, 24);
             this.IDtxtBox.Name = "IDtxtBox";
-            this.IDtxtBox.Size = new System.Drawing.Size(133, 19);
+            this.IDtxtBox.ReadOnly = true;
+            this.IDtxtBox.Size = new System.Drawing.Size(133, 22);
             this.IDtxtBox.TabIndex = 1;
             // 
             // expiryDate
             // 
             this.expiryDate.Location = new System.Drawing.Point(104, 74);
             this.expiryDate.Name = "expiryDate";
-            this.expiryDate.Size = new System.Drawing.Size(200, 19);
+            this.expiryDate.Size = new System.Drawing.Size(200, 22);
             this.expiryDate.TabIndex = 5;
             // 
             // label2
@@ -154,7 +155,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.Size = new System.Drawing.Size(97, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên độc giả: ";
             // 
@@ -164,7 +165,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(105, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày hết hạn: ";
             // 
@@ -172,7 +173,7 @@
             // 
             this.NametxtBox.Location = new System.Drawing.Point(103, 52);
             this.NametxtBox.Name = "NametxtBox";
-            this.NametxtBox.Size = new System.Drawing.Size(133, 19);
+            this.NametxtBox.Size = new System.Drawing.Size(133, 22);
             this.NametxtBox.TabIndex = 3;
             // 
             // panel4
@@ -253,7 +254,7 @@
             // 
             // QLDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1182, 673);
