@@ -138,28 +138,10 @@ namespace QLTV.MainForm
         //int MaTL;
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            if(CategoryBox.Text=="Huyền nhuyễn")
-            {
-                MaTL = 2;
-            }
 
-            if (CategoryBox.Text == "Khoa huyễn")
-            {
-                MaTL = 4;
-            }
+            string cateId = sQLManager.stringDataFromQuery("select MaTheLoai from TheLoai where TenTheLoai = N'" + CategoryBox.Text + "'")[0];
 
-            if (CategoryBox.Text == "Nấu ăn")
-            {
-                MaTL = 1003;
-            }
-
-            if (CategoryBox.Text == "Quân sự")
-            {
-                MaTL = 5;
-            }
-
-            sQLManager.runqueryWithoutOutput("Update DauSach set TenSach = N'" + NametxtBox.Text + "', MaTheLoai = " + MaTL+ ", Sl="+ nOfBook.Value + " where MaSach = '" + IDtxtBox.Text + "'");
+            sQLManager.runqueryWithoutOutput("Update DauSach set TenSach = N'" + NametxtBox.Text + "', MaTheLoai = " + cateId + ", Sl="+ nOfBook.Value + " where MaSach = '" + IDtxtBox.Text + "'");
             UpdateBookTB();
         }
 

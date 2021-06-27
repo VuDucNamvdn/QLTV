@@ -16,7 +16,6 @@ namespace QLTV
         public SqlCommand command;
         SqlDataReader sqlReader;
         SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable dataTable;
 
         //Truyền vào đoạn mã kết nối với database của sql
         public SQLManager(string dataSource)
