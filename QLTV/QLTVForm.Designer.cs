@@ -229,6 +229,7 @@
             this.helperBTN.Text = "?";
             this.helperBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.helperBTN.UseVisualStyleBackColor = false;
+            this.helperBTN.Click += new System.EventHandler(this.helperBTN_Click);
             // 
             // exitBTN
             // 

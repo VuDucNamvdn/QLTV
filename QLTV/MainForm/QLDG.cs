@@ -72,28 +72,8 @@ namespace QLTV.MainForm
 
         private void addBTN_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(mydefine.dataSource);
-            //string id = IDtxtBox.Text;
-            connection.Open();
-
-
-            string sql = "select * from Docgia where MaDocGia = '" + IDtxtBox.Text + "'";
-
-            SqlCommand cmd = new SqlCommand(sql, connection);
-
-            SqlDataReader dta = cmd.ExecuteReader();
-            if (dta.Read() == true)
-            {
-
-                MessageBox.Show(" Trùng mã! Mời Nhập lại");
-            }
-            else
-            {
-                dta.Close();
-
-                sQLManager.runqueryWithoutOutput("Insert into Docgia values( N'" + NametxtBox.Text + "','" + expiryDate.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' )");
-                UpdateDGTB();
-            }
+            sQLManager.runqueryWithoutOutput("Insert into Docgia values( N'" + NametxtBox.Text + "','" + expiryDate.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' )");
+            UpdateDGTB();
         }
 
         private void updateBTN_Click(object sender, EventArgs e)

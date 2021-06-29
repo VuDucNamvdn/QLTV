@@ -104,29 +104,11 @@ namespace QLTV.MainForm
             {
                 MessageBox.Show("Nhập lại số lượng");
                 return;
-            }    
-            SqlConnection connection = new SqlConnection(mydefine.dataSource);
-            connection.Open();
-
-
-            string sql = "select * from DauSach where MaSach = '" + IDtxtBox.Text + "'";
-
-            SqlCommand cmd = new SqlCommand(sql, connection);
-
-            SqlDataReader dta = cmd.ExecuteReader();
-            if (dta.Read() == true)
-            {
-
-                MessageBox.Show(" Trùng mã! Mời Nhập lại");
             }
-            else
-            {
-                dta.Close();
-                string cateId = sQLManager.stringDataFromQuery("select MaTheLoai from TheLoai where TenTheLoai = N'" + CategoryBox.Text + "'")[0];
-                sQLManager.runqueryWithoutOutput("Insert into DauSach values( N'" + NametxtBox.Text + "', '"+ cateId + "', '"+ nOfBook.Value.ToString() + "' )");
-                UpdateCat();
-                UpdateBookTB();
-            }
+            string cateId = sQLManager.stringDataFromQuery("select MaTheLoai from TheLoai where TenTheLoai = N'" + CategoryBox.Text + "'")[0];
+            sQLManager.runqueryWithoutOutput("Insert into DauSach values( N'" + NametxtBox.Text + "', '" + cateId + "', '" + nOfBook.Value.ToString() + "' )");
+            UpdateCat();
+            UpdateBookTB();
         }
 
         private void searchForBookBTN_Click(object sender, EventArgs e)

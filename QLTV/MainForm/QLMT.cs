@@ -124,6 +124,12 @@ namespace QLTV.MainForm
 
         private void editDMT_Click(object sender, EventArgs e)
         {
+            var dataCheck = sQLManager.stringDataFromQuery("select * from D_MuonTra where MaMuonTra = '" + IDMTtxtBox.Text + "' AND MaSach ='" + bookID.Text + "'");
+            if(dataCheck.Count>0)
+            {
+                MessageBox.Show("Trùng mã sách trong danh sách mượn");
+                return;
+            }
             sQLManager.runqueryWithoutOutput("exec SuaD_MT @MaMuonTra = '" + IDMTtxtBox.Text + "', @MaSach ='" + newBookID.Text + "'" + ", @MaSachBanDau ='" + bookID.Text + "'");
             UpdateRentDetailTB();
         }

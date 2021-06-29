@@ -113,11 +113,6 @@ namespace QLTV
             OpenChildForm(new QLDG());
         }
 
-        private void helperBTN_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void qlmtBTN_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, mydefine.color6);
@@ -156,6 +151,11 @@ namespace QLTV
         private void settingBTN_Click(object sender, EventArgs e)
         {
             new Account.AccountSettingsForm(userNamelabel.Text).ShowDialog();
+        }
+
+        private void helperBTN_Click(object sender, EventArgs e)
+        {
+            new Helpers.Helper().ShowDialog();
         }
     }
 }
